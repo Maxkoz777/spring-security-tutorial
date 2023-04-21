@@ -1,6 +1,6 @@
 package com.dailycodebuffer.client.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +13,10 @@ import static org.springframework.security.oauth2.client.web.reactive.function.c
 
 
 @RestController
+@RequiredArgsConstructor
 public class HelloController {
 
-    @Autowired
-    private WebClient webClient;
+    private final WebClient webClient;
 
     @GetMapping("/api/hello")
     public String hello(Principal principal) {

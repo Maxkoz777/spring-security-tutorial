@@ -23,6 +23,11 @@ public class HelloController {
         return "Hello " +principal.getName()+", Welcome to Daily Code Buffer!!";
     }
 
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, Welcome to Daily Code Buffer!!";
+    }
+
     @GetMapping("/api/users")
     public String[] users(
             @RegisteredOAuth2AuthorizedClient("api-client-authorization-code")

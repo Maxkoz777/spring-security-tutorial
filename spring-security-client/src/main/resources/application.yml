@@ -34,3 +34,7 @@ spring:
         provider:
           spring:
             issuer-uri: http://localhost:9000
+
+logging:
+  level:
+    root: debug

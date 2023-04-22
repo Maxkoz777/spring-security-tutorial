@@ -29,7 +29,7 @@ public class HelloController {
                     OAuth2AuthorizedClient client){
         return this.webClient
                 .get()
-                .uri("http://127.0.0.1:8090/api/users")
+                .uri("http://localhost:8090/api/users")
                 .attributes(oauth2AuthorizedClient(client))
                 .retrieve()
                 .bodyToMono(String[].class)

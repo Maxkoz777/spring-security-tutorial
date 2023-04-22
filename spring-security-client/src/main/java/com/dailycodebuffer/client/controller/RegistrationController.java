@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 import java.util.UUID;
 
+@CrossOrigin
 @RestController
 @Slf4j
 public class RegistrationController {

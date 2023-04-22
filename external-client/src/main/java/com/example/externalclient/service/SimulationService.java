@@ -3,8 +3,6 @@ package com.example.externalclient.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.ExecutorService;
@@ -29,7 +27,10 @@ public class SimulationService {
     }
 
     private void execute() {
-        restClient.sendRegisterRequest();
-        restClient.sendSimpleRequest();
+        for (int i = 0; i < 1000; i++) {
+            restClient.sendRegisterRequest();
+            restClient.sendSimpleRequest();
+            restClient.sendLoginRequest();
+        }
     }
 }

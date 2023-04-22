@@ -26,4 +26,11 @@ public class TimerConfiguration {
                 .description("Simulation timer")
                 .register(registry);
     }
+
+    @Bean
+    public Timer loginTimer(MeterRegistry registry) {
+        return Timer.builder("simulation_login")
+                .description("Simulation timer")
+                .register(registry);
+    }
 }
